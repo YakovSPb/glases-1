@@ -1,0 +1,5 @@
+/node_modules/
+/desing/
+/.git/
+/**/Thumbs.db
+/**/*.DS_Store
