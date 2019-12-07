@@ -3,11 +3,11 @@
 @import libs
 
 ::placeholder
-	color: #666
+	color: #000
 
 ::selection
 	background-color: $accent
-	color: #fff
+	color: #000
 
 input, textarea
 	outline: none
@@ -15,6 +15,36 @@ input, textarea
 		border-color: red
 	&:required:valid
 		border-color: green
+
+textarea:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+input:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+
+html
+	-ms-overflow-style: none
+	scrollbar-width: none
+	&::-webkit-scrollbar
+		width: 0
+	&::-webkit-scrollbar
+		width: 0
+
+
+html
+  overflow: scroll
+  overflow-x: hidden
+::-webkit-scrollbar
+  width: 0px
 
 body
 	font-size: 14px
@@ -69,6 +99,7 @@ h1, .h1
 	padding: 0 40px 0 70px
 	display: inline-block
 	position: relative
+	letter-spacing: 2px
 	&:before
 		content: ''
 		width: 1000px
@@ -287,3 +318,364 @@ h1, .h1
 		&:nth-child(2n)
 			padding-left: 90px
 
+// CLIENT
+.clients
+	&__bg
+		background: url('../img/@2x/homepage/home-client-bg.jpg') no-repeat
+		min-height: 582px
+		background-size: cover
+	&__info
+		position: relative
+		padding-top: 80px
+	&__h2
+		margin-bottom: 40px
+
+.clients-inner
+	background: rgba(255, 255, 255, .5)
+	max-width: 780px
+	margin-left: auto
+	border-left: 15px solid $accent
+	position: relative
+	padding: 45px 0 45px 45px
+	&:after
+		content: ''
+		height: 100%
+		width: 1000px
+		background: rgba(255, 255, 255, .5)
+		position: absolute
+		top: 0
+		right: -1000px
+	&__list
+		list-style-type: none
+	&__item
+		font-size: 20px
+		font-weight: 700
+		background-color: #fff
+		line-height: 40px
+		margin-bottom: 15px
+		padding-left: 80px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: 20px
+			top: 11px
+			width: 15px
+			height: 15px
+			background: $accent
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 674px
+			height: 100%
+			width: 10000px
+			background:	#fff
+
+.clients-slider
+	margin: 70px 0
+	&__slide
+		text-align: center
+		img
+			margin: 0 auto
+// CASES
+.cases
+	.h2
+		margin-bottom: 40px
+.cases-slider
+	&__slide
+		height: 350px
+		width: 350px
+		position: relative
+		img
+			bject-fit: cover
+			height: 100%
+			width: 100%
+			border-right: 3px solid #fff
+			border-left: 3px solid #fff
+
+// STEP
+.sect-steps
+	&__h2
+		margin-bottom: 40px
+		margin-top: 40px
+.steps
+	display: flex
+	&__item
+		width: 200px
+		height: 200px
+		margin-right: 30px
+		background: $accent
+		color: #fff
+		font-weight: 700
+		font-size: 14px
+		text-transform: uppercase
+		text-align: center
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 20px 0
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			border: 15px solid transparent
+			border-left: 27px solid $accent 
+			top: 81px
+			right: -38px
+			width: 25px
+			height: 25px
+		&:last-child
+			margin-right: 0
+			&:after
+				display: none
+	&__img
+		svg
+			width: 80px
+			height: 110px
+			fill: #fff
+	&__text
+
+// SECT-COMMENTS
+.sect-comments
+	&__h2
+		margin-bottom: 40px
+		margin-top: 40px
+.comments
+	background: url('../img/@2x/homepage/home-comment-bg.jpg') no-repeat
+	background-size: cover
+	.comment
+		font-weight: 700
+		height: 430px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		&__img
+			margin-bottom: 50px
+			position: relative
+			&:after
+				content: ',,'
+				position: absolute
+				width: 60px
+				height: 60px
+				font-size: 60px
+				transform: scale(-1, -1)
+				bottom: -101px
+				left: 20px
+				color: #fff
+			img
+				width: 130px
+				height: 130px
+				border-radius: 10em
+		&__text
+			font-size: 14px
+			max-width: 593px
+			text-align: center
+			letter-spacing: 1px
+		&__name
+			font-size: 16px
+			margin-top: 20px
+
+// FORM
+.sect-form
+	margin-top: 60px
+	&__title
+		background: $accent
+		margin-bottom: 70px
+		.h2
+			font-size: 32px
+			line-height: 50px
+			text-transform: uppercase
+			color: #fff
+			text-align: center
+
+.form
+	position: relative
+	display: flex
+	justify-content: space-between
+	margin: 0 auto
+	max-width: 1060px
+	width: 100%
+	height: 660px
+	padding: 40px 50px 50px 60px
+	color: #fff
+	background: url('../img/@2x/homepage/form-bg.jpg') no-repeat
+	background-size: conver
+	&__btn
+		max-width: 100%
+		width: 100%
+		height: 105px
+	&__left
+		width: 50%
+		font-weight: 700
+		p
+			font-size: 32px
+			line-height: 32px
+			margin-bottom: 0
+		span
+			font-size: 10px
+			line-height: 10px
+			max-width: 300px
+			display: block
+			margin-top: 15px
+	&__phone
+		margin-top: 10px
+	&__left-item
+		margin-bottom: 40px
+		&:nth-child(3)
+			margin-top: 75px
+			margin-bottom: 65px
+	&__right
+		max-width: 400px
+	.form__p
+		text-align: center
+		font-size: 11px
+		max-width: 300px
+		margin: 0 auto
+		line-height: 14px
+	input, textarea
+		border: 2px solid #e2e2e2	
+		width: 100%
+		padding: 9px 9px 9px 25px
+		color: #000
+		margin-bottom: 50px
+		font-size: 18px
+		font-weight: 700
+		&::-webkit-input-placeholder
+			color: #000
+			opacity: 1
+		&::-moz-placeholder
+			color: #000
+			opacity: 1
+		&::-ms-input-placeholder
+			color: #000
+	textarea
+		margin-bottom: 20px
+
+.wrap-inpute
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	&__item
+		width: 100%
+		label
+			display: block
+			font-size: 13px
+		input
+			width: 100%
+
+.input-cheked
+	cursor: pointer
+	padding-left: 40px
+	max-width: 380px
+	position: relative
+	font-size: 14px
+	font-weight: 700
+	letter-spacing: 2px
+	margin: 10px	0	30px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 6px
+		right: 29px
+		background: #fff
+		width: 40px
+		height: 40px
+	&__text
+		line-height: 25px
+	label
+		line-height: 16px
+		padding-right: 100px
+		z-index: 100000
+		position: relative
+		cursor: pointer
+	input
+		display: none
+	input[type=checkbox]:checked + label:before
+		content: "\f00c"
+		font-family: "FontAwesome"
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
+		font-size: 24px
+		color: $accent
+		text-align: center
+		line-height: 15px
+		position: absolute
+		top: 18px
+		right: 35px
+		z-index: 1000
+
+// MAP
+.sect-map
+	margin-top: 50px
+	position: relative
+	&__inner
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+.map-info
+	max-width: 500px
+	height: 460px
+	background: #fff
+	padding: 35px
+	margin-top: 90px
+	margin-left: auto
+	&__title
+		font-weight: 700
+		font-size: 18px
+		text-transform: uppercase
+		margin-top: 20px
+		margin-bottom: 30px
+	&__img
+		img
+			width: 100%
+			height: 170px
+	&__item
+		margin-bottom: 10px
+		svg
+			width: 20px
+			height: 25px
+			margin-right: 5px
+
+// FOOTER
+.footer
+	padding-top: 35px
+	height: 270px
+	background-color: $accent
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__logo
+	&__copy
+		font-size: 14px
+		letter-spacing: 1px
+		color: #fff
+		text-transform: uppercase
+		span
+			color: #000
+			font-weight: 700
+	&__social
+		svg
+			width: 55px
+			height: 55px
+			margin-right: 40px
+			transition: all .5s ease
+			path
+				transition: all .5s ease
+			&:hover
+				path
+					fill: #000
+			// path
+			// 	fill: red
+	&__links
+		text-align: center
+		margin-top: 30px
+		a
+			color: #000
+		
+		
