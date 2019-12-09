@@ -111,8 +111,8 @@ close[0].addEventListener('click', event => {
 const Container = document.getElementsByClassName('container')
 const widthContainer = Container[0].offsetWidth
 const widthAdvanFoat = (width - widthContainer) / 2
-const advanFoatElement = document.getElementsByClassName('a-dvan__float')[0]
-advanFoatElement.style.width = widthAdvanFoat + 'px'
+const advanFoatElement = document.getElementsByClassName('a-dvan__float')
+if(advanFoatElement[0]){advanFoatElement[0].style.width = widthAdvanFoat + 'px'}
 
 // a-dvan__float-WIDTH-END
 
@@ -130,5 +130,25 @@ $('.a-slider').slick({
 // aboust-comments-slider-END
 
 
+// MEDIA JAVASCRIPT START
+var mediaQueryDown1200 = window.matchMedia("screen and (max-width: 1200px)");
+mediaQueryDown1200.addListener(foo2);
+foo2(mediaQueryDown1200);
+// MEDIA JAVASCRIPT END
 
-}) //EDN NAG
+// MEDIA DOWN1200 START ===========================================
+function foo2(mq) {
+// DESTROY LINK MOBMENU START
+$('.menu__link--has_sub').click(function(e){
+  e.preventDefault();
+});
+ $('.menu__link--has_sub').click(function(){
+ $(this).parent().toggleClass('active');
+ });
+
+// DESTROY LINK MOBMENU END 
+}
+// MEDIA DOWN1200 END ==========================================
+
+
+}) //EDN TAG

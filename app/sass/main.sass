@@ -144,7 +144,7 @@ h1, .h1
 	display: flex
 	align-items: center
 	justify-content: center
-	transition: all .5s ease
+	transition: all .3s ease
 	&:hover
 		color: $accent
 		text-decoration: none
@@ -183,11 +183,13 @@ h1, .h1
 			display: none
 	&__location
 		display: flex
+		justify-content: flex-end
 		width: 25%
 		+media-breakpoint-down(lg)
 			display: none
 	&__phone
 		display: flex
+		justify-content: flex-end
 		width: 25%
 		a
 			color: #fff
@@ -210,6 +212,7 @@ h1, .h1
 	&__mail
 		display: flex
 		width: 25%
+		justify-content: flex-end
 		+media-breakpoint-down(lg)
 			display: none
 		a
@@ -225,6 +228,7 @@ h1, .h1
 				display: none!important
 
 .menu
+	position: relative
 	+media-breakpoint-down(lg)
 		display: none
 		position: absolute
@@ -234,6 +238,23 @@ h1, .h1
 		background: $accent
 		z-index: 1000
 		padding-top: 14px
+		.menu__link--has_sub
+			position: relative
+			&:after
+				content: '\f107'
+				font-family: "FontAwesome"
+				position: absolute
+				top: 0
+				left: -15px
+		&__submenu
+			padding-left: 20px
+			margin-bottom: 20px
+			position: relative
+		&__sub-link
+			color: #fff
+			text-transform: uppercase
+			&:hover
+				color: #000
 		&__list
 			flex-direction: column
 			align-items: flex-start!important
@@ -242,6 +263,17 @@ h1, .h1
 		&__item
 			&:after
 				display: none
+	.active
+		display: block
+		.menu__link--has_sub
+			&:after
+				content: '\f106'
+		.menu__submenu
+			display: block
+		.menu__sub-item
+			display: block
+
+
 	&--active
 		display: block
 	&__list
@@ -250,13 +282,17 @@ h1, .h1
 		align-items: flex-end
 		margin-bottom: 0
 	&__item
-		position: relative
 		padding-right: 18px
 		padding-left: 18px
+		position: relative
+		&:hover
+			>.menu__sub-item--mega, .menu__sub-item--mega
+				display: block
+
 		&--home
 			+media-breakpoint-down(lg)
-				position: absolute
-				top: 14px
+				position: relative
+				top: -2px
 				left: 0
 				svg
 					display: none
@@ -293,8 +329,27 @@ h1, .h1
 			svg
 				width: 25px
 				height: 25px
-	&__submenu
+	&__sub-item
+		display: none	
+	&__sub-item--mega
 		display: none
+		position: absolute
+		width: 940px
+		top: 16px
+		right: -547px
+		z-index: 1000
+		background: rgba(0, 0, 0, .8)
+		padding: 30px
+		border-top: 30px solid #fff
+		&:before
+			content: ''
+			position: absolute
+			top: -24px
+			left: 340px
+			border: 8px solid transparent
+			border-bottom: 16px solid rgba(0, 0, 0, .8)
+		+media-breakpoint-down(lg)
+			display: none!important
 	&__link
 		line-height: 15px
 		display: block
@@ -307,15 +362,72 @@ h1, .h1
 			color: #fff
 		&:hover
 			color: #000
+	&__mega-list
+		list-style-type: none
+		padding: 0
+		margin: 0 48px 0 0
+		&:last-child
+			margin-right: 0
+		li
+			position: relative
+			line-height: 35px
+			&:last-child
+				&:after
+					display: none
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 0
+				height: 2px
+				width: 100%
+				background: #fff
+			a
+				color: #fff
+				transition: all .3s ease
+				&:hover
+					color: $accent
+					text-decoration: none
+	&__mega-wrap
+		display: flex
+		justify-content: space-between
+	&__mega-title
+		text-align: center
+		margin-bottom: 50px
+		position: relative
+		width: 388px
+		&:after
+			content: ''
+			position: absolute
+			bottom: -18px
+			left: 50%
+			margin-left: -30px
+			width: 60px
+			height: 4px
+			background: #fff
+		a
+			text-transform: uppercase
+			color: #fff
+			transition: all .3s ease
+			&:hover
+				color: $accent
+				text-decoration: none
+	&__mega-list-wrap
+		display: flex
 
 .gumburger
 	display: none
-	font-size: 30px
 	cursor: pointer
 	.fa
 		color: #fff
+		font-size: 30px
 	+media-breakpoint-down(lg)
 		display: block
+		font-size: 12px
+		position: relative
+		&:after
+			content: ''
+
 
 
 // PROMO
@@ -1030,13 +1142,13 @@ h1, .h1
 			width: 55px
 			height: 55px
 			margin-right: 40px
-			transition: all .5s ease
+			transition: all .3s ease
 			+media-breakpoint-down(md)
 				width: 30px
 				height: 30px
 				margin-right: 20px
 			path
-				transition: all .5s ease
+				transition: all .3s ease
 			&:hover
 				path
 					fill: #000
