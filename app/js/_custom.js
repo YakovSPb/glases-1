@@ -19,52 +19,63 @@ $('.clients-slider').slick({
 });
 // CLIENT SLIDER END
 
+
+
 // CASE SLIDER START
-$('.cases-slider').slick({
-	slidesToShow: 4,
-	slidesToScroll: 4,
-	draggable: true,
-	speed: 900,
-	rows: 2,
-	infinite: true,
-	arrows: false,
-	centerMode: true,
-	centerPadding: '150px',
-	autoplay: true,
-	autoplaySpeed: 9000,
-	responsive: [
-	{
-		breakpoint: 1379,
-		settings: {
-			slidesToShow: 2,
-			rows: 1,
-			centerMode: false,
-			centerPadding: '0'
-		}
-	},
-	{
-		breakpoint: 780,
-		settings: {
-			slidesToShow: 1,
-			rows: 1,
-			centerMode: false,
-			centerPadding: '0'
-		}
-	}
-	]
-});
+const width = window.innerWidth || document.body.clientWidth
+const $slick = $('.cases-slider')
+
+if(width < 480){
+	$slick.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		draggable: true,
+		speed: 900,
+		rows: 1,
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 9000,
+		centerMode: false,
+		centerPadding: '0',
+	});
+} else if (width < 1370) {
+		$slick.slick({
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		draggable: true,
+		speed: 900,
+		rows: 1,
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 9000,
+		centerMode: false,
+		centerPadding: '0',
+	});
+} else{
+	$slick.slick({
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		draggable: true,
+		speed: 900,
+		rows: 2,
+		infinite: true,
+		arrows: false,
+		centerMode: true,
+		centerPadding: '150px',
+		autoplay: true,
+		autoplaySpeed: 9000,
+	});
+}
 // CASE SLIDER END
-// var mediaQuery = window.matchMedia("screen and (max-width: 1379x)");
-// mediaQuery.addListener(reinitSlider);
-// foo(mediaQuery);
 
-// function reinitSlider(mq) {
-// 	if(mq){
-// 		$('.cases-slider').slick('reinit')
-// 	}
-// }
-
-
+// right-text-start
+const widthRightText = document.getElementsByClassName('main__right-text')
+const widthLeftText = document.getElementsByClassName('main__left-text')
+widthRightText[0].style.height = width + 'px'
+widthLeftText[0].style.height = width + 'px'
+// right-text-end
 
 // CASE SLIDER START
 $('.comments').slick({
@@ -94,5 +105,30 @@ close[0].addEventListener('click', event => {
 	link[0].style.visibility = 'visible'
 })
 // MENU END
+
+
+// a-dvan__float-WIDTH-START
+const Container = document.getElementsByClassName('container')
+const widthContainer = Container[0].offsetWidth
+const widthAdvanFoat = (width - widthContainer) / 2
+const advanFoatElement = document.getElementsByClassName('a-dvan__float')[0]
+advanFoatElement.style.width = widthAdvanFoat + 'px'
+
+// a-dvan__float-WIDTH-END
+
+
+
+
+// aboust-comments-slider-START
+$('.a-slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	speed: 900,
+	infinite: true,
+	arrows: false,
+});
+// aboust-comments-slider-END
+
+
 
 }) //EDN NAG

@@ -56,6 +56,15 @@ body
 	color: #000
 	font-weight: 400
 
+h1, .h1
+	margin-left: 26px
+	line-height: 40px
+	margin-top: 15px
+	+media-breakpoint-down(sm)
+		font-size: 35px!important
+		margin-left: 0
+
+
 // Custom Sass / Remove before use
 
 .container
@@ -161,10 +170,11 @@ h1, .h1
 	&__inner
 		display: flex
 		align-items: center
-		height: 74px
+		height: 55px
 		+media-breakpoint-down(lg)
 			justify-content: space-between
 			align-items: center
+			height: 60px
 	&__clock
 		display: flex
 		width: 25%
@@ -218,10 +228,12 @@ h1, .h1
 	+media-breakpoint-down(lg)
 		display: none
 		position: absolute
-		top: 74px
+		top: 60px
 		left: 0
 		width: 320px
 		background: $accent
+		z-index: 1000
+		padding-top: 14px
 		&__list
 			flex-direction: column
 			align-items: flex-start!important
@@ -244,7 +256,7 @@ h1, .h1
 		&--home
 			+media-breakpoint-down(lg)
 				position: absolute
-				top: 0
+				top: 14px
 				left: 0
 				svg
 					display: none
@@ -269,7 +281,7 @@ h1, .h1
 		&--close
 			display: none
 			position: absolute
-			top: -52px
+			top: -44px
 			left: 0
 			color: #fff
 			.fa
@@ -307,6 +319,35 @@ h1, .h1
 
 
 // PROMO
+.main
+	position: relative
+	&__right-text, &__left-text
+		position: absolute
+		width: 100%
+		top: 544px
+		right: 0
+		text-transform: uppercase
+		font-size: 250px
+		line-height: 170px
+		letter-spacing: 46px
+		white-space: nowrap
+		font-weight: 700
+		color: $accent
+		opacity: .15
+		transform: rotate(90deg)
+		background: none
+		color: $accent
+		z-index: -1
+		overflow-x: hidden
+		+media-breakpoint-down(lg)
+			display: none
+	&__left-text
+		display: flex
+		margin-top: auto
+		bottom: -200px
+		align-items: flex-end
+		+media-breakpoint-down(lg)
+			display: none
 .promo
 	background: url(../img/@2x/homepage/home-promo-bg.jpg) no-repeat
 	background-size: cover
@@ -334,8 +375,8 @@ h1, .h1
 		max-width: 580px
 		margin-left: auto
 		+media-breakpoint-down(sm)
-			font-size: 20px
-			line-height: 25px
+			font-size: 20px!important
+			line-height: 25px!important
 	&__btn
 		margin: 40px auto 100px
 		+media-breakpoint-down(sm)
@@ -344,6 +385,7 @@ h1, .h1
 // EDGE
 .edge
 	margin-bottom: 50px
+	position: relative
 	+media-breakpoint-down(sm)
 		margin-bottom: 30px
 	.container
@@ -404,6 +446,7 @@ h1, .h1
 	margin-bottom: 50px
 	+media-breakpoint-down(sm)
 		margin-top: 30px
+		margin-bottom: 20px
 	&__item
 		margin-top: 60px
 		+media-breakpoint-down(sm)
@@ -446,8 +489,7 @@ h1, .h1
 		grid-template-columns: 1fr 1fr
 		grid-template-areas: "left right"
 		+media-breakpoint-down(sm)
-			grid-template-columns: 1fr
-			grid-template-areas: none
+			display: block
 	&__table
 		font-size: 14px
 	&__cell
@@ -1010,3 +1052,189 @@ h1, .h1
 			color: #000
 		
 		
+// ABOUT PAG
+.breadcrumb
+	display: flex
+	list-style-type: none
+	padding-left: 30px
+	+media-breakpoint-down(sm)
+	padding-left: 0
+	li
+		position: relative
+		&:last-child
+			&:after
+				display: none
+		&:after
+			content: '/'
+			margin: 0 5px
+	a
+		color: #000
+
+.about-promo
+	&__inner
+		display: flex
+		justify-content: space-between
+		+media-breakpoint-down(lg)
+			flex-direction: column
+			align-items: center
+	&__info
+		max-width: 630px
+		padding-top: 40px
+		+media-breakpoint-down(sm)
+			padding-top: 5px
+		p
+			margin-bottom: 0
+			text-align: justify
+			line-height: 20px
+		ul
+			list-style-type: none
+			text-indent: 30px
+			padding-left: 0
+			margin: 30px 0
+	&__img
+		img
+			width: 100%
+			+media-breakpoint-down(lg)
+				width: 200px
+
+.a-advan
+	background: #000
+	position: relative
+	.container
+		margin-right: 0
+		padding-right: 0
+	&__inner
+		display: flex
+	&__item
+		z-index: 1
+		+media-breakpoint-down(lg)
+			width: 50%
+			text-align: center
+			display: flex
+			flex-direction: column
+			align-items: center
+	&__numbers
+		background: #000
+		padding: 50px 50px 50px 27px
+		+media-breakpoint-down(lg)
+			background: url('../img/@2x/about/about_bg.jpg') no-repeat
+			background-size: cover
+			display: flex
+			flex-wrap: wrap
+			position: relative
+			width: 100%
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: rgba(0, 0, 0, .8)
+		+media-breakpoint-down(sm)
+			padding: 17px 0 0
+	&__square 
+		color: #fff
+		font-size: 100px
+		font-weight: 700
+		height: 286px
+		width: 286px
+		border: 10px solid $accent
+		display: flex
+		align-items: center
+		justify-content: center
+		+media-breakpoint-down(sm)
+			width: 70px
+			height: 70px
+			font-size: 35px
+			border: 3px solid $accent
+	&__text
+		color: $accent
+		font-size: 18px
+		text-align: center
+		max-width: 188px
+		margin: 40px auto 53px auto
+		+media-breakpoint-down(sm)
+			font-size: 14px
+			max-width: 150px
+			margin: 2px auto 21px auto
+		&--more
+			margin-bottom: 30px
+			+media-breakpoint-down(sm)
+				margin-bottom: 7px
+	&__img
+		+media-breakpoint-down(lg)
+			display: none
+		img
+			object-fit: cover
+	    height: 100%
+	    width: 100%
+			max-height: 1940px
+	&__item:last-child
+		.a-advan__text:last-child
+			margin-bottom: 0
+	&__float
+		+media-breakpoint-down(lg)
+			display: none
+
+.a-slider
+	min-height: 750px
+	margin: 60px 0
+	position: relative
+	+media-breakpoint-down(sm)
+		min-height: auto
+		margin: 30px 0
+	&:after
+		content: ''
+		background: url('../img/@2x/about/about_bg_comment.jpg') no-repeat
+		background-size: cover
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		z-index: -1
+	.container
+		position: relative
+		min-height: 750px
+		+media-breakpoint-down(sm)
+			min-height: auto
+	&__inner
+		max-width: 900px
+		margin: 0 auto
+		padding: 120px 0 0 0
+		+media-breakpoint-down(sm)
+			padding: 35px 0 0 0
+	&__quote
+		font-size: 60px
+		line-height: 60px
+		font-weight: 700
+		transform: scale(-1, -1)
+		text-align: right
+		+media-breakpoint-down(sm)
+			font-size: 26px
+	&__text
+		+media-breakpoint-down(sm)
+			max-height: 114px
+			overflow: hidden
+			text-align: justify
+		p
+			margin-bottom: 0
+			letter-spacing: 1.2px
+			font-size: 15px
+			+media-breakpoint-down(sm)
+				font-size: 12px
+				letter-spacing: 0
+	&__sign
+		font-size: 45px
+		font-family: "NicolettaScript", sans-serif
+		position: absolute
+		bottom: 100px
+		right: 100px
+		+media-breakpoint-down(sm)
+			font-size: 30px
+			position: relative
+			margin-top: 40px
+			bottom: 0
+			right: 0
+			text-align: right
