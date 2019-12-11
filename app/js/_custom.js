@@ -40,7 +40,7 @@ if(width < 480){
 		centerPadding: '0',
 	});
 } else if (width < 1370) {
-		$slick.slick({
+	$slick.slick({
 		slidesToShow: 2,
 		slidesToScroll: 2,
 		draggable: true,
@@ -113,7 +113,7 @@ const widthContainer = Container[0].offsetWidth
 const widthAdvanFoat = (width - widthContainer) / 2
 const advanFoatElement = document.getElementsByClassName('a-dvan__float')
 if(advanFoatElement[0]){advanFoatElement[0].style.width = widthAdvanFoat + 'px'}
-
+	if(advanFoatElement[1]){advanFoatElement[1].style.width = widthAdvanFoat + 'px'}
 // a-dvan__float-WIDTH-END
 
 
@@ -132,23 +132,62 @@ $('.a-slider').slick({
 
 // MEDIA JAVASCRIPT START
 var mediaQueryDown1200 = window.matchMedia("screen and (max-width: 1200px)");
+var mediaQueryDown580 = window.matchMedia("screen and (max-width: 580px)");
 mediaQueryDown1200.addListener(foo2);
-foo2(mediaQueryDown1200);
+foo2(mediaQueryDown1200)
+
+// mediaQueryDown580.addListener(foo580);
+// foo580(mediaQueryDown580);
 // MEDIA JAVASCRIPT END
 
 // MEDIA DOWN1200 START ===========================================
 function foo2(mq) {
 // DESTROY LINK MOBMENU START
 $('.menu__link--has_sub').click(function(e){
-  e.preventDefault();
+	e.preventDefault();
 });
- $('.menu__link--has_sub').click(function(){
- $(this).parent().toggleClass('active');
- });
+$('.menu__link--has_sub').click(function(){
+	$(this).parent().toggleClass('active');
+});
 
 // DESTROY LINK MOBMENU END 
 }
 // MEDIA DOWN1200 END ==========================================
+
+// QUESTIONG FAQ START
+$('.f-quest__list li').click(function(){
+	if($(this).children('ul').is(':hidden')){
+		$(this).children('ul').slideDown('slow');
+		$(this).toggleClass('active')
+	} else {
+		$(this).children('ul').slideUp('slow');
+		$(this).toggleClass('active')
+	}
+});
+// QUESTIONG FAQ END
+
+// fabrication SLIDER START
+if(width < 576){
+	$('.f-scope__galery').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		speed: 900,
+		infinite: true,
+		arrows: false,
+	});
+}
+//
+// fabrication SLIDER START
+if(width < 576){
+	$('.f-mayby__inner').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		speed: 900,
+		infinite: true,
+		arrows: false,
+	});
+}
+// fabrication SLIDER END
 
 
 }) //EDN TAG

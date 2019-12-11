@@ -38,7 +38,10 @@ html
 		width: 0
 	&::-webkit-scrollbar
 		width: 0
-
+a
+	color: $accent
+	&:hover
+		color: $accent
 
 html
 	overflow: scroll
@@ -151,6 +154,13 @@ h1, .h1
 		text-decoration: none
 		border-color: $accent
 		background: #fff
+	&__green
+		color: #fff
+		background: $accent
+		border: 5px solid $accent
+		&:hover
+			color: $accent
+			background: #fff
 
 
 
@@ -1168,6 +1178,7 @@ h1, .h1
 // ABOUT PAG
 .breadcrumb
 	display: flex
+	flex-wrap: wrap
 	list-style-type: none
 	padding-left: 30px
 	+media-breakpoint-down(sm)
@@ -1507,3 +1518,373 @@ h1, .h1
 .service__sect-form
 	+media-breakpoint-down(md)
 		display: none
+
+// FABRICATION PAGE
+.f-promo
+	display: flex
+	background: $accent
+	margin-top: 50px
+	+media-breakpoint-down(lg)
+		margin-top: 20px
+		flex-direction: column-reverse
+	&__info
+		max-width: 665px
+		width: 100%
+		padding-left: 25px
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		+media-breakpoint-down(lg)
+			margin: 0 auto
+			padding: 20px 10px
+	&__title
+		font-weight: 700
+		font-size: 32px
+		line-height: 36px
+		text-transform: uppercase
+		color: #fff
+		max-width: 400px
+		+media-breakpoint-down(lg)
+			text-align: center
+			margin: 0 auto 40px
+		+media-breakpoint-down(sm)
+			font-size: 20px
+			line-height: 26px
+			max-width: 248px
+	&__item
+		text-transform: uppercase
+		color: #fff
+		font-size: 18px
+		margin-bottom: 15px
+		+media-breakpoint-down(sm)
+			font-size: 15px
+		svg
+			width: 26px
+			height: 26px
+			fill: #fff
+			margin-right: 20px
+	&__img
+		width: 100%
+		img
+			width: 100%
+			max-height: 578px
+	&__btn
+		.btn
+			+media-breakpoint-down(lg)
+				margin: 0 auto
+			+media-breakpoint-down(sm)
+				width: 244px
+				height: 60px
+				text-transform: none
+				letter-spacing: 0.2
+				margin: 20px auto
+// .f-scope
+.f-scope
+	display: flex
+	flex-direction: row
+	align-items: flex-start
+	padding-bottom: 70px
+	@media only screen and (max-width: 1400px)
+		flex-direction: column
+	+media-breakpoint-down(md)
+		padding-bottom: 30px
+	&__main
+		padding-right: 66px
+		padding-top: 70px
+		@media only screen and (max-width: 1400px)
+			padding-right: 0
+			margin: 0 auto
+		+media-breakpoint-down(md)
+			padding: 30px 0 0
+	&__main-list
+		margin: 60px 0 80px 70px
+		padding-left: 34px
+		list-style-type: none
+		max-width: 400px
+		+media-breakpoint-down(md)
+			padding: 0
+			margin: 15px 10px 15px 45px
+		li
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 8px
+				left: -35px
+				border: 6px solid transparent
+				border-left: 12px solid #000
+	&__galery
+		display: grid
+		grid-gap: 70px
+		grid-template-columns: 1fr 1fr 1fr
+		+media-breakpoint-down(md)
+			grid-gap: 10px
+			grid-template-columns: 1fr 1fr
+		+media-breakpoint-down(xs)
+			display: grid
+			grid-gap: 0
+			grid-template-columns: 1fr
+			img
+				width: 100%
+	&__services
+		background: $accent
+		max-width: 600px
+		width: 100%
+		padding: 70px 0 80px 120px
+		@media only screen and (max-width: 1400px)
+			max-width: 100%
+		+media-breakpoint-down(md)
+			padding: 25px 20px 10px 40px
+	&__ser-title
+		font-size: 32px
+		font-weight: 700
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 1px
+		+media-breakpoint-down(sm)
+			font-size: 25px
+	&__ser-list
+		margin-top: 60px
+		list-style-type: square
+		padding-left: 0
+		+media-breakpoint-down(sm)
+			margin-top: 40px
+		li
+			color: #fff
+			padding-left: 15px
+			margin-bottom: 10px
+			a
+				color: #fff
+				text-transform: uppercase
+				font-weight: 700
+
+// s-cutting
+.f-cutting
+	.container
+		+media-breakpoint-down(sm)
+			padding: 0
+	&__content
+		margin: 55px	0	115px
+		+media-breakpoint-down(sm)
+			margin: 30px 0
+			padding: 0 10px
+
+.f-quest
+	background: #000
+	color: #fff
+	padding: 50px 0 40px
+	+media-breakpoint-down(md)
+		padding: 5px 0
+	&__inner
+		max-width: 700px
+		margin: 0 auto
+	&__title
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+		padding-bottom: 40px
+		padding-left: 40px
+		+media-breakpoint-down(sm)
+			font-size: 25px
+			line-height: 32px
+			text-align: center
+			padding: 0 0 10px
+	&__list
+		list-style-type: none
+		font-size: 18px
+		padding-left: 0
+		+media-breakpoint-down(sm)
+			font-size: 16px
+		.active
+			&:after
+				content: "-"
+		li
+			margin-bottom: 10px
+			position: relative
+			cursor: pointer
+			&:after
+				content: '+'
+				position: absolute
+				top: 0
+				right: 0
+				+media-breakpoint-down(sm)
+					right: 14px
+	&__sub
+		display: none
+		list-style-type: none
+		padding-left: 0
+		li
+			font-size: 14px
+			padding: 20px 10px 10px 0
+			&:after
+				display: none
+
+// .f-price
+.f-price
+	.container
+		+media-breakpoint-down(md)
+			padding: 0
+	padding: 70px 0
+	+media-breakpoint-down(md)
+		padding: 30px 0
+	&__inner
+		padding: 0 160px 0 135px
+		+media-breakpoint-down(md)
+			padding: 0
+	&__title
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
+		margin: 50px 0
+		+media-breakpoint-down(md)
+			margin: 0 0 20px
+	&__table
+		width: 100%
+		tr
+			&:nth-child(odd)
+				background: $accent
+				color: #fff
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					top: 0
+					left: -1000px
+					width: 3000px
+					height: 42px
+					background: $accent
+					z-index: -1
+					+media-breakpoint-down(lg)
+						display: none
+		td
+			width: 50%
+			height: 40px
+			+media-breakpoint-down(lg)
+				padding: 0 10px
+			&:nth-child(odd)
+			&:nth-child(even)
+				text-align: right
+	&__min
+		padding-top: 25px
+		color: $accent
+		font-weight: 700
+		+media-breakpoint-down(md)
+			text-align: center
+	&__footer
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 18px
+		padding: 40px 0 0 20px
+		+media-breakpoint-down(md)
+			text-align: center
+			padding: 30px 10px 0 10px
+		+media-breakpoint-down(sm)
+			font-size: 16px
+
+// juridical
+.juridical
+	&__inner
+		background: $accent
+		color: #fff
+	&__wrap
+		padding: 40px 90px 50px 70px
+		+media-breakpoint-down(sm)
+			padding: 20px 0px 1px 0px
+	&__title
+		font-size: 18px
+		text-transform: uppercase
+		font-weight: 700
+		text-align: center
+		margin-bottom: 50px
+		+media-breakpoint-down(sm)
+			margin-bottom: 20px
+	&__btn
+		.btn
+			margin: 60px auto
+			font-size: 18px
+			+media-breakpoint-down(md)
+				margin: 20px auto 30px auto
+				text-transform: none
+	&__sect-form
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+		.container
+			padding-left: 0
+			padding-right: 0
+		.sect-form__title
+			margin-bottom: 0
+			.h2
+				margin-bottom: 0
+				+media-breakpoint-down(sm)
+					line-height: 35px
+					margin-bottom: 10px
+		.sect-form__aftertitle
+			text-align: center
+		.form
+			background: url('../img/@2x/fabrication/f-form-bg.jpg') no-repeat
+			height: auto
+			max-width: 100%
+		.form__left
+			display: none
+		.input-cheked
+			padding-left: 0
+		.input-cheked__label
+			max-width: 344px
+			+media-breakpoint-down(sm)
+				width: 300px
+		.input-cheked::after
+			right: 87px
+			+media-breakpoint-down(sm)
+				right: 147px
+			+media-breakpoint-down(xs)
+				right: 65px
+		.input-cheked input[type="checkbox"]:checked + label::before
+			right: 55px
+			+media-breakpoint-down(sm)
+				right: 70px  
+		.wrap-inpute__item input:last-child
+			margin-bottom: 20px
+		.btn
+			font-size: 18px
+			background: #fff
+			border: 5px solid #000
+			color: $accent
+			height: 90px
+			+media-breakpoint-down(md)
+				width: 266px
+				height: 66px
+				margin: 0 auto 15px
+			&:hover
+				color: #000
+		.form__hidden-phone
+			+media-breakpoint-down(sm)
+				display: none
+
+
+// .f-mayby
+.f-mayby
+	.container
+		padding-right: 0
+		padding-left: 0
+	&__inner
+		display: flex
+		justify-content: space-between
+		margin: 50px 0 60px
+		+media-breakpoint-down(md)
+			margin: 20px 0 30px
+		+media-breakpoint-down(xs)
+			display: block
+	.s-wrap__text
+		+media-breakpoint-down(xs)
+			font-size: 16px
+	.s-wrap__item
+		position: relative
+		max-width: 372px
+		width: 100%
+		+media-breakpoint-down(xs)
+			max-width: 100%
+		&:last-child
+			margin-right: 0
+		img
+			width: 100%
