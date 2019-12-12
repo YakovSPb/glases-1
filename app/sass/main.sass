@@ -444,6 +444,7 @@ h1, .h1
 // PROMO
 .main
 	position: relative
+	overflow: hidden
 	&__right-text, &__left-text
 		position: absolute
 		width: 100%
@@ -2018,3 +2019,171 @@ h1, .h1
 	.btn
 		+media-breakpoint-down(xs)
 			margin-bottom: 0
+
+// PRICE PAGE
+.price-content
+	padding-top: 40px
+	+media-breakpoint-down(md)
+		padding-top: 10px
+	p
+		letter-spacing: 2px
+.price
+	.f-price
+		padding-top: 0
+	.f-price__title
+		font-size: 25px
+	.f-price__inner
+		padding: 0
+	.f-price__table
+		tr
+			&:after
+				display: none
+		td
+			padding: 10px 170px 10px 148px
+			+media-breakpoint-down(md)
+				padding-left: 20px
+				padding-right: 20px
+.pice__juridical
+	.juridical__inner
+		background: #000!important
+	.juridical__wrap
+		padding-bottom: 30px
+	.juridical__title
+		color: $accent
+		font-size: 25px
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			max-width: 233px
+			margin: 0 auto 20px
+	p
+		font-size: 18px
+		text-align: center
+	.juridical__footer
+		text-transform: uppercase
+		text-transform: uppercase
+		font-size: 18px
+		text-align: center
+		margin: 40px 0 0
+
+.price__sect-form
+	.sect-form__title
+		font-size: 25px
+		text-transform: uppercase
+		font-weight: 700
+		max-width: 964px
+		text-align: center
+		margin: 0 auto
+		background: #fff
+		.h2
+			color: #000
+			margin-bottom: 60px
+			+media-breakpoint-down(md)
+				margin-bottom: 10px 
+	.form
+		background: url('../img/@2x/price/form-proce-bg.jpg') no-repeat
+		background-size: cover
+		padding: 40px
+		max-width: 1200px
+		margin-left: auto
+		margin-right: auto
+		+media-breakpoint-down(md)
+			padding: 20px 10px
+	.form__right
+		width: 100%
+	.input-cheked
+		max-width: 600px
+		margin: 20px auto 20px
+	.input-cheked__label
+		max-width: 100%
+		padding-bottom: 20px
+		+media-breakpoint-down(md)
+			padding-bottom: 0
+	.input-cheked::after
+		top: -4px
+		+media-breakpoint-down(md)
+			display: block
+			left: 222px
+			top: 12px
+	.input-cheked input[type="checkbox"]:checked + label::before
+		right: 27px
+		top: 8px
+		+media-breakpoint-down(md)
+			right: 6px
+			top: 17px
+	.btn
+		max-width: 350px
+		margin: 0 auto
+		height: 85px
+		+media-breakpoint-down(md)
+			height: 75px
+			width: 100%
+
+
+
+.tabs__wrapper
+	position: relative
+	+media-breakpoint-down(md)
+		margin-left: auto
+		margin-right: auto
+	.tabs
+		text-align: center
+		margin-bottom: 70px
+		+media-breakpoint-down(md)
+			display: inline-flex
+			flex-direction: column
+			display: none
+			width: 267px
+			margin: 0 auto
+		.tab
+			font-weight: 700
+			border: 3px solid $accent
+			line-height: 30px
+			display: inline-block
+			text-transform: uppercase
+			padding: 0 10px
+			margin-bottom: 5px
+			letter-spacing: 1.8px
+			cursor: pointer
+		.tab.active
+			background: $accent
+			color: #fff
+.tabs__gumburger
+	position: absolute
+	top: 0
+	right: 20px
+	cursor: pointer
+	.fa
+		color: $accent
+		font-size: 30px
+	+media-breakpoint-down(md)
+			display: block
+.tabs__wrapper-mob
+	display: flex
+	justify-content: space-between
+	position: relative
+	display: none
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		display: block
+
+.tabs__dublicate
+	font-weight: 700
+	font-size: 20px
+	line-height: 36px
+	border: 3px solid $accent
+	text-transform: uppercase
+	padding: 0 13px
+	display: inline-block
+	margin-left: 20px
+
+.tabs__close
+	display: none
+	position: absolute
+	top: 0
+	right: 20px
+	cursor: pointer
+	.fa
+		color: $accent
+		font-size: 30px
+.tabs.tabs--active
+	display: flex

@@ -247,4 +247,48 @@ if(width < 576){
 
 
 
+// PRICE TABS START
+$(".tab_item").not(":first").hide();
+$(".tabs__wrapper .tab").click(function() {
+	$(".tabs__wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+	$(".tab_item").hide().eq($(this).index()).fadeIn()
+	tabListener()
+	if(width < 992){
+		$('.tabs').removeClass('tabs--active')
+		$('.tabs__close').css('display', 'none')
+		$('.tabs__gumburger').css('display', 'block')
+	}
+}).eq(0).addClass("active");
+
+
+
+// mobile
+function tabListener(){
+let activeTab = $('.tabs .active').text()
+$('.tabs__dublicate').text(activeTab)
+}
+tabListener()
+// PRICE TABS END
+
+// MOBILE TABS START
+const linkTab = document.getElementsByClassName('tabs__gumburger')
+const closeTab = document.getElementsByClassName('tabs__close')
+const menuTab = document.getElementsByClassName('tabs')
+
+linkTab[0].addEventListener('click', event => {
+	event.preventDefault()
+	menuTab[0].classList.add('tabs--active')
+	linkTab[0].style.display = 'none'
+	closeTab[0].style.display = 'block'
+})
+closeTab[0].addEventListener('click', event => {
+	event.preventDefault()
+	menuTab[0].classList.remove('tabs--active')
+	linkTab[0].style.display = 'block'
+	closeTab[0].style.display = 'none'
+})
+// MOBILE TABS END
+
+
+
 }) //EDN TAG
