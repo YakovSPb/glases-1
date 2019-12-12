@@ -190,4 +190,61 @@ if(width < 576){
 // fabrication SLIDER END
 
 
+
+
+
+// PRODUCTION CASES SPOILER START
+const blockSpeed = 1000;
+
+const blockHeight = $('.d-cases-slider').height();
+$('.d-cases-slider').css('height','690');
+
+
+
+$('.d-cases__btn').click(function(){
+	$('.d-cases-slider').animate({height:blockHeight}, blockSpeed);
+	$(this).css('display', 'none')
+	$('.d-cases__btn2').css('display', 'block')
+});
+
+
+$('.d-cases__btn2').click(function(){
+	$('.d-cases-slider').animate({height:690}, blockSpeed);
+	$('.d-cases__btn').css('display', 'block')
+	$(this).css('display', 'none')
+});
+
+if(width < 576) {
+	$('.d-cases-slider').css('height','auto');
+}
+
+
+// PRODUCTION CASES SPOILER END
+
+
+
+
+
+// PRODUCTION CASES SLIDER START
+const $dslick = $('.d-cases-slider')
+
+if(width < 576){
+	$dslick.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		draggable: true,
+		speed: 900,
+		rows: 1,
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 9000,
+		centerMode: false,
+		centerPadding: '0',
+	});
+}
+// PRODUCTION CASES SLIDER END
+
+
+
 }) //EDN TAG

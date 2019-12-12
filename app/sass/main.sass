@@ -1182,7 +1182,7 @@ h1, .h1
 	list-style-type: none
 	padding-left: 30px
 	+media-breakpoint-down(sm)
-	padding-left: 0
+		padding-left: 0
 	li
 		position: relative
 		&:last-child
@@ -1578,6 +1578,7 @@ h1, .h1
 				text-transform: none
 				letter-spacing: 0.2
 				margin: 20px auto
+				border: 3px solid #fff
 // .f-scope
 .f-scope
 	display: flex
@@ -1825,6 +1826,8 @@ h1, .h1
 			background: url('../img/@2x/fabrication/f-form-bg.jpg') no-repeat
 			height: auto
 			max-width: 100%
+		.form__right
+			max-width: 100%
 		.form__left
 			display: none
 		.input-cheked
@@ -1836,13 +1839,13 @@ h1, .h1
 		.input-cheked::after
 			right: 87px
 			+media-breakpoint-down(sm)
-				right: 147px
+				right: 145px
 			+media-breakpoint-down(xs)
-				right: 65px
+				left: 197px
 		.input-cheked input[type="checkbox"]:checked + label::before
 			right: 55px
 			+media-breakpoint-down(sm)
-				right: 70px  
+				left: 172px  
 		.wrap-inpute__item input:last-child
 			margin-bottom: 20px
 		.btn
@@ -1888,3 +1891,130 @@ h1, .h1
 			margin-right: 0
 		img
 			width: 100%
+
+// PRODUCTIONS
+.p-promo
+	margin-top: 80px
+	.d-promo__img--1200
+		+media-breakpoint-down(xs)
+			display: none
+	.d-promo__img--320
+		display: none
+		+media-breakpoint-down(xs)
+			display: block
+	+media-breakpoint-down(lg)
+		margin-top: 20px
+	.d-promo__img
+		img
+			border-top: 100px solid #fff
+			+media-breakpoint-down(lg)
+				border: none
+			
+	.d-promo__info
+		border-bottom: 14px solid #fff
+		position: relative
+		+media-breakpoint-down(lg)
+			border: none
+			&:after
+				display: none
+		&:after
+			content: ''
+			position: absolute
+			bottom: -14px
+			right: -1px
+			height: 14px
+			width: 22px
+			background: #1f2024
+	.d-dvan__float
+		border-bottom: 14px solid #fff
+
+.p-content
+	margin-top: 55px
+	+media-breakpoint-down(md)
+		margin-top: 30px
+	.h2
+		margin-bottom: 70px
+		+media-breakpoint-down(md)
+			margin-bottom: 20px
+
+.d-price
+	.h2
+		margin-bottom: 70px
+		+media-breakpoint-down(md)
+			margin-bottom: 10px
+	p
+		padding-left: 70px
+		padding-right: 100px
+		+media-breakpoint-down(md)
+			padding: 0 10px
+	.btn
+		margin: 50px auto 0 auto
+		font-size: 20px
+		+media-breakpoint-down(md)
+			margin-top: 10px
+
+.d-whywe
+	.edge__grid
+		padding: 0 10px
+	.d-edge__inner
+		margin-right: 70px
+		max-width: 300px
+		+media-breakpoint-down(md)
+			margin-right: auto!important
+			margin-left: auto!important
+		&:last-child
+			margin-right: 0
+	.edge__item
+		margin: 0 auto 70px auto
+		+media-breakpoint-down(md)
+			max-width: 200px
+			height: 240px
+			width: 100%
+			margin: 0 auto 10px auto
+	.d-edge__text
+		+media-breakpoint-down(md)
+			text-align: center
+			margin-bottom: 30px
+
+.d-cases
+	.h2
+		margin: 65px 0
+		+media-breakpoint-down(md)
+			margin: 0 0 20px
+	.d-cases-slider
+		display: flex
+		flex-wrap: wrap
+		overflow: hidden
+	.cases-slider__slide
+		width: 340px
+		height: 340px
+		margin-bottom: 5px
+	.btn
+		max-width: 665px
+		width: 100%
+		margin: 70px auto
+		+media-breakpoint-down(xs)
+			display: none
+	.d-cases__btn2
+		display: none
+		+media-breakpoint-down(xs)
+			display: none
+
+.d-partners
+	.d-partners__text
+		background: $accent
+		color: #fff
+		padding: 30px 0
+		font-size: 18px
+		letter-spacing: 2px
+		+media-breakpoint-down(sm)
+			padding: 10px 0
+		p
+			padding: 0 100px 0 30px
+			+media-breakpoint-down(sm)
+				padding: 0 10px
+				margin-bottom: 0
+.d-promo__btn
+	.btn
+		+media-breakpoint-down(xs)
+			margin-bottom: 0

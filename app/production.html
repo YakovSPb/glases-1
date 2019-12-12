@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__info">
+			<div class="container">
+				<div class="header__inner">
+
+					<div class="header__clock">
+						<div class="header__clock-img"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path d="M507.203,205.836C487.977,105.187,406.813,24.023,306.164,4.797C126.117-29.594-29.594,126.117,4.797,306.164 c19.227,100.648,100.391,181.813,201.039,201.039C385.883,541.594,541.594,385.883,507.203,205.836z M374.625,374.625 C368.375,380.875,360.188,384,352,384s-16.375-3.125-22.625-9.375l-96-96c-6-6-9.375-14.125-9.375-22.625V128 c0-17.688,14.328-32,32-32s32,14.313,32,32v114.75l86.625,86.625C387.125,341.875,387.125,362.125,374.625,374.625z"/> </svg></div>
+						<div class="header__clock-text">ПН-ПТ 9:00-18:00</div>
+					</div>
+
+
+					<div class="header__location">
+						<div class="header__location-img"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve"> <path d="M148.5,0C85.646,0,34.511,51.136,34.511,113.989c0,25.11,8.008,48.926,23.157,68.873 c13.604,17.914,32.512,31.588,53.658,38.904l27.464,68.659c1.589,3.971,5.434,6.574,9.71,6.574c4.276,0,8.121-2.603,9.71-6.574 l27.464-68.659c21.146-7.316,40.054-20.99,53.658-38.904c15.149-19.947,23.157-43.763,23.157-68.873 C262.489,51.136,211.354,0,148.5,0z M148.5,72.682c22.777,0,41.308,18.53,41.308,41.308c0,22.777-18.53,41.309-41.308,41.309 c-22.777,0-41.308-18.531-41.308-41.309C107.192,91.212,125.723,72.682,148.5,72.682z"/> </svg></div>
+						<div class="header__location-text">194044, СПб, ул. Чугунная, 20</div>
+					</div>
+
+					<a class="gumburger"><i class="fa fa-bars"></i></a>
+
+					<div class="header__logo-mini">
+						<img src="img/@2x/homepage/logo-footer.png" alt="">
+					</div>
+					<div class="header__phone">
+						<div class="header__phone-img"><a class="header__phone-link" href="tel:+78129831119"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34.545px" height="34.545px" viewBox="0 0 34.545 34.545" style="enable-background:new 0 0 34.545 34.545;" xml:space="preserve"> <path d="M34.371,13.114c-0.043,0.217-0.045,0.441-0.129,0.646c-0.498,1.202-1.429,2.197-2.116,3.305	c-0.885,1.414-8.404-1.633-7.435-3.521c0.365-0.698,1.788-2.626,1.896-3.401c0.098-0.691-0.818-1.233-1.664-1.303 c-2.231-0.18-5.084-0.017-7.453-0.002V8.84c-0.063,0-0.133,0-0.197-0.001C17.208,8.84,17.138,8.84,17.076,8.84V8.838 c-2.37-0.015-5.221-0.178-7.453,0.002C8.777,8.91,7.861,9.452,7.959,10.144c0.107,0.775,1.531,2.703,1.896,3.401 c0.971,1.888-6.551,4.935-7.436,3.521c-0.688-1.107-1.617-2.103-2.115-3.305c-0.084-0.205-0.087-0.43-0.13-0.646 c-1.103-4.93,3.149-9.96,9.551-10.475c2.446-0.199,4.897-0.311,7.351-0.354V2.272c0.066,0.002,0.131,0.006,0.197,0.007 c0.066-0.001,0.131-0.005,0.197-0.007v0.013c2.453,0.044,4.904,0.155,7.35,0.354C31.223,3.154,35.475,8.186,34.371,13.114z M29.975,30.124c0.069,1.183-0.703,2.148-1.723,2.148H6.293c-1.017,0-1.792-0.967-1.722-2.148l0.641-10.783 c2.327-0.545,5.301-1.969,6.38-3.737c0.601-0.985,0.665-2.094,0.171-3.055c-0.125-0.24-0.359-0.615-0.628-1.033l-0.001-0.002 c-0.008-0.019-0.008-0.019-0.014-0.032h11.953c-0.006,0.017-0.008,0.02-0.018,0.044c-0.15,0.361-0.201,0.638-0.173,0.847 c-0.034,0.061-0.082,0.138-0.108,0.188c-0.488,0.948-0.424,2.058,0.177,3.042c1.079,1.77,4.051,3.191,6.378,3.736L29.975,30.124z M21.473,18.932c-2.302-2.301-6.043-2.301-8.346,0c-2.301,2.301-2.301,6.044,0,8.345c2.083,2.083,5.345,2.273,7.651,0.586 l-1.443-1.441c-1.502,0.922-3.494,0.742-4.794-0.559c-1.521-1.521-1.521-3.995,0.001-5.517c1.521-1.521,3.995-1.521,5.517,0 c1.294,1.294,1.477,3.272,0.568,4.772l1.445,1.445C23.746,24.257,23.549,21.009,21.473,18.932z"/></svg></a></div>
+						<div class="header__phone-text"><a class="header__phone-link" href="tel:+78129831119">+7 812 983-11-19</a></div>
+					</div>	
+
+					<div class="header__mail">
+						<div class="header__mail-img"><a class="header__mail-link" href="mailto:steklo-n1@mail.ru"><svg enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m22.437 6.554-9.958-5.432c-.299-.163-.659-.163-.958 0l-9.957 5.432c-.965.525-1.564 1.534-1.564 2.634v10.812c0 1.654 1.346 3 3 3h18c1.654 0 3-1.346 3-3v-10.812c0-1.1-.599-2.109-1.563-2.634zm-19.916 1.756 9.479-5.171 9.479 5.17c.321.176.521.512.521.879v1.249l-9.414 4.917c-.361.187-.811.187-1.169.002l-9.417-4.919v-1.249c0-.367.2-.703.521-.878z"/></svg></a></div>
+						<div class="header__mail-text"><a class="header__mail-link" href="mailto:steklo-n1@mail.ru">steklo-n1@mail.ru</a></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="header__nav-inner">
+				<div class="logo">
+					<a href=""><img src="img/@2x/logo-header.png" alt=""></a>
+				</div>
+
+				<nav class="menu header__menu">
+					<ul class="menu__list">
+						<li class="menu__item menu__item--close"><i class="fa fa-times"></i></li>	
+						<li class="menu__item menu__item--home"><a class="menu__link" href=""><span>Главная</span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 306.773 306.773" style="enable-background:new 0 0 306.773 306.773;" xml:space="preserve"> <path style="fill:#010002;" d="M302.93,149.794c5.561-6.116,5.024-15.49-1.199-20.932L164.63,8.898 c-6.223-5.442-16.2-5.328-22.292,0.257L4.771,135.258c-6.092,5.585-6.391,14.947-0.662,20.902l3.449,3.592 c5.722,5.955,14.971,6.665,20.645,1.581l10.281-9.207v134.792c0,8.27,6.701,14.965,14.965,14.965h53.624 c8.264,0,14.965-6.695,14.965-14.965v-94.3h68.398v94.3c-0.119,8.264,5.794,14.959,14.058,14.959h56.828 c8.264,0,14.965-6.695,14.965-14.965V154.024c0,0,2.84,2.488,6.343,5.567c3.497,3.073,10.842,0.609,16.403-5.513L302.93,149.794z"/> </svg></a></li>
+						<li class="menu__item"><a class="menu__link" href="">О компании</a><li>
+							<li class="menu__item"><a class="menu__link menu__link--has_sub" href="">Услуги</a>
+								<ul class="menu__submenu">
+									<li class="menu__sub-item menu__sub-item--mega">
+										<div class="menu__mega-wrap">
+
+											<div class="menu__mega-item">
+												<div class="menu__mega-title"><a href="">Производство</a></div>
+												<div class="menu__mega-list-wrap">
+													<ul class="menu__mega-list">
+														<li><a href="">Закалка стекла</a></li>
+														<li><a href="">УФ склейка</a></li>
+														<li><a href="">Фотопечать на стекле</a></li>
+														<li><a href="">Полировка</a></li>
+														<li><a href="">Сверление стекла</a></li>
+														<li><a href="">Тонирование стекла</a></li>
+														<li><a href="">Покраска стекла</a></li>
+													</ul>
+													<ul class="menu__mega-list">
+														<li><a href="">Резка стекла</a></li>
+														<li><a href="">Фацетирование</a></li>
+														<li><a href="">Шлифовка</a></li>
+														<li><a href="">Моллирование стекла</a></li>
+														<li><a href="">Нанесение бронепленки</a></li>
+														<li><a href="">Изготовление зеркал</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="menu__mega-item">
+												<div class="menu__mega-title"><a href="">Продукция</a></div>
+												<div class="menu__mega-list-wrap">
+													<ul class="menu__mega-list">
+														<li><a href="">Зеркала с подсветкой</a></li>
+														<li><a href="">Стеклянные столешницы</a></li>
+														<li><a href="">Кухонный фартук</a></li>
+														<li><a href="">Стеклянный шкаф</a></li>
+														<li><a href="">Зеркала на заказ</a></li>
+														<li><a href="">Триплекс</a></li>
+														<li><a href="">Стеклянные двери</a></li>
+													</ul>
+													<ul class="menu__mega-list">
+														<li><a href="">Мебельные фасады</a></li>
+														<li><a href="">Стеклянные полки</a></li>
+														<li><a href="">Стекло для теплиц</a></li>
+														<li><a href="">Стеклянные витрины</a></li>
+														<li><a href="">Каленое стекло</a></li>
+														<li><a href="">Стекло</a></li>
+														<li><a href="">Стеклянные перегородки</a></li>
+													</ul>
+												</div>
+											</div>
+
+										</div>
+									</li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">История</a></li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">Структура</a></li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">Документы</a></li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">Реквизиты</a></li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">Благодарственные письма</a></li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">Профсоюзная организация</a></li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">Работа и стажировка</a></li>
+									<li class="menu__sub-item"><a class="menu__sub-link" href="">Область акредитации</a></li>
+								</ul>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="">Цены</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Подрядчикам</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Примеры</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Отзывы</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+						</ul>
+					</nav>
+
+
+				</div>
+
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="main__left-text">
+				Glass comp
+			</div>
+			<div class="main__right-text">
+				Glass company №1
+			</div>
+
+			<div class="container">
+				<h1 class="h1">Стеклянные витрины</h1>
+				<ol class="breadcrumb">
+					<li><a href="/">Главная</a></li>
+					<li><a href="/">Услуги</a></li>
+					<li><a href="/">Продукция</a></li>
+					<li><span>Стеклянные витрины</span></li>
+				</ol>
+			</div>
+
+			<div class="f-promo p-promo">
+				<div class="a-dvan__float d-dvan__float"></div>
+
+
+				<div class="f-promo__info d-promo__info">
+					<div class="f-promo__title">
+						Оформив у нас заказ, вы получаете:
+					</div>
+
+					<div class="f-promo__item-inner">
+						<div class="f-promo__item">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 299.995 299.995" style="enable-background:new 0 0 299.995 299.995;" xml:space="preserve"> <path d="M149.995,0C67.156,0,0,67.158,0,149.995s67.156,150,149.995,150s150-67.163,150-150S232.834,0,149.995,0z M214.842,178.524H151.25c-0.215,0-0.415-0.052-0.628-0.06c-0.213,0.01-0.412,0.06-0.628,0.06 c-5.729,0-10.374-4.645-10.374-10.374V62.249c0-5.729,4.645-10.374,10.374-10.374s10.374,4.645,10.374,10.374v95.527h54.47 c5.729,0,10.374,4.645,10.374,10.374C225.212,173.879,220.571,178.524,214.842,178.524z"/> </svg>
+							Экономию времени
+						</div>
+						<div class="f-promo__item">
+							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 218.581 218.581" style="enable-background:new 0 0 218.581 218.581;" xml:space="preserve"> <path d="M162.184,81.401c-3.403,13.011-11.344,15.877-15.581,16.452c-2.61,5.218-8.347,15.882-14.086,21.24 c-2.294,2.141-5.275,3.948-8.86,5.371c-4.577,1.816-9.411,2.737-14.366,2.737s-9.789-0.921-14.366-2.737 c-3.584-1.422-6.566-3.229-8.86-5.371c-5.74-5.357-11.477-16.022-14.087-21.24c-4.236-0.575-12.177-3.44-15.58-16.452 c-1.82-6.958-1.354-12.63,1.386-16.859c1.211-1.869,2.679-3.142,4.046-4.004c0.004-1.389,0.062-3.128,0.223-5.106 c-2.461-3.42-5.807-10.799-1.663-22.743c4.38-12.627,14.283-14.577,19.063-14.746c1.616-3.004,4.669-7.269,10.213-11.19 C95.82,2.398,103.856,0,112.293,0c10.382,0,20.829,3.654,30.211,10.567c15.211,11.208,13.908,36.07,13.535,40.584 c0.552,3.784,0.705,7.066,0.712,9.386c1.367,0.862,2.835,2.135,4.046,4.004C163.537,68.771,164.003,74.442,162.184,81.401z M206.67,178.29v35.291c0,2.761-2.239,5-5,5H16.911c-2.761,0-5-2.239-5-5V178.29c0-14.458,8.674-27.27,22.098-32.64l43.715-17.486 c1.258-0.502,2.666-0.475,3.903,0.081c1.236,0.554,2.195,1.587,2.655,2.861l10.99,30.383l2.176-6.256l-3.462-8.463 c-0.63-1.542-0.452-3.297,0.477-4.68c0.929-1.383,2.485-2.213,4.151-2.213h21.354c1.666,0,3.223,0.83,4.151,2.213 c0.929,1.383,1.107,3.138,0.477,4.68l-3.462,8.463l2.176,6.256l10.99-30.383c0.46-1.274,1.419-2.307,2.655-2.861 c1.237-0.555,2.646-0.582,3.903-0.081l43.715,17.486C197.997,151.02,206.67,163.832,206.67,178.29z M180.054,182.127 c0-2.761-2.239-5-5-5h-33.57c-2.761,0-5,2.239-5,5v15.59c0,2.761,2.239,5,5,5h33.57c2.761,0,5-2.239,5-5V182.127z"/> </svg>
+							Персонального менеджера
+						</div>
+						<div class="f-promo__item">
+							<svg height="511pt" viewBox="-60 1 511 511.99925" width="511pt" xmlns="http://www.w3.org/2000/svg"><path d="m195.5 151c-57.890625 0-105 47.109375-105 105s47.109375 105 105 105 105-47.109375 105-105-47.109375-105-105-105zm70.605469 85.605469-75 75c-2.929688 2.929687-6.769531 4.394531-10.605469 4.394531s-7.675781-1.464844-10.605469-4.394531l-45-45c-5.859375-5.859375-5.859375-15.351563 0-21.210938s15.351563-5.859375 21.210938 0l34.394531 34.394531 64.394531-64.394531c5.859375-5.859375 15.351563-5.859375 21.210938 0s5.859375 15.351563 0 21.210938zm0 0"/><path d="m375.5 61h-35.140625c-50.714844 0-98.394531-20.746094-134.253906-56.605469-5.859375-5.859375-15.351563-5.859375-21.210938 0-35.859375 35.859375-83.539062 56.605469-134.253906 56.605469h-35.140625c-8.292969 0-15 6.707031-15 15v180c0 134.792969 98.085938 197.492188 162.992188 238.316406 5.933593 3.722656 25.691406 17.683594 32.007812 17.683594 6.300781 0 25.535156-13.601562 31.449219-17.316406 65.128906-40.851563 163.550781-103.613282 163.550781-238.683594v-180c0-8.292969-6.710938-15-15-15zm-180 330c-74.445312 0-135-60.558594-135-135 0-74.445312 60.554688-135 135-135 74.441406 0 135 60.554688 135 135 0 74.441406-60.558594 135-135 135zm0 0"/></svg>
+							Качественные материалы
+						</div>
+					</div>
+
+					<div class="f-promo__btn d-promo__btn">
+						<a href="" class="btn">Оставить заявку</a>
+					</div>
+				</div>
+
+
+				<div class="f-promo__img d-promo__img">
+					<img class="d-promo__img--1200" src="img/@2x/production/p-promo-bg.jpg" alt="">
+					<img class="d-promo__img--320" src="img/@2x/production/p-promo-bg--320.jpg" alt="">
+				</div>
+			</div>
+
+			<div class="p-content">
+				<div class="container">
+					<h2 class="h2 h2--main">Изготовление витрин</h2>
+					<p>Текст про изготовление витрин. Текст про изготовление витрин.</p>
+					<p>Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин.<br/>
+						Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин
+					</p>
+					<p>Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. Текст про изготовление витрин. </p>
+				</div>
+			</div>
+
+			<div class="f-quest">
+				<div class="container">
+
+					<div class="f-quest__inner">
+						<div class="f-quest__title">Часто задаваемые вопросы</div>
+						<ul class="f-quest__list">
+							<li>Что мы не производим/не изготавливаем?
+								<ul class="f-quest__sub">
+									<li>Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос.</li>
+								</ul>
+							</li>
+							<li>Какая стоимость доставки?
+								<ul class="f-quest__sub">
+									<li>Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос.</li>
+								</ul>
+							</li>
+							<li>По каким районам мы работаем?
+								<ul class="f-quest__sub">
+									<li>Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос.</li>
+								</ul>
+							</li>
+							<li>какими объемами мы работаем?
+								<ul class="f-quest__sub">
+									<li>Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос. Ответ на первый вопрос.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="f-price d-price">
+				<div class="container">
+					<h2 class="h2 h2--main">Цены на услуги резки стекла</h2>
+
+					<p>Мы всегда предоставляем выгодные условия нашим партнерам. Для точного и подробного  рассчета цен, исходя из объемов и специфики  производства, оставьте заявку , либо свяжитесь с нами по телефону, указанному на сайте.</p>
+
+					<div class="juridical__btn">
+						<a href="" class="btn btn__green">Узнать цены</a>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="d-whywe">
+				<div class="sect-form__title">
+					<h2 class="h2">Преимущества</h2>
+				</div>
+				<div class="edge__grid">
+
+					<div class="d-edge__inner">
+						<div class="edge__item">
+							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 469.334 469.334" style="enable-background:new 0 0 469.334 469.334;" xml:space="preserve"> <path d="M15.834,176.542C58.104,201.677,162,263.355,213.875,293.094c6.354,3.646,13.563,5.573,20.792,5.573 s14.438-1.927,20.813-5.583c51.854-29.729,155.75-91.406,198.021-116.552c9.917-5.917,15.833-16.083,15.833-27.198 c0-11.115-5.917-21.281-15.833-27.208c-32.667-19.427-143.438-85.25-198.042-116.552C249.037,1.886,241.911-0.03,234.663,0 c-7.025,0.029-14.166,1.888-20.892,5.635c0,0-148.5,87.219-197.917,116.479C5.917,128.011,0,138.177,0,149.334 C0,160.448,5.917,170.615,15.834,176.542z"/> <path d="M453.875,207.75c-3.354-2.073-7.604-2.115-11-0.073c-57.438,34.094-134.708,79.802-176.792,103.917 c-19.208,11-43.646,10.99-62.813,0.01C160.792,287.25,83.667,241.646,26.459,207.677c-3.375-2.031-7.646-2-11.021,0.073 C5.771,213.677,0,223.74,0,234.667c0,11.115,5.917,21.281,15.833,27.208C58.104,287.011,162,348.688,213.875,378.427 c6.354,3.646,13.563,5.573,20.792,5.573s14.438-1.927,20.813-5.583c51.854-29.729,155.75-91.406,198.021-116.552 c9.917-5.917,15.833-16.083,15.833-27.198C469.334,223.74,463.563,213.677,453.875,207.75z"/> <path d="M453.875,293.084c-3.354-2.052-7.604-2.115-11-0.073c-57.438,34.094-134.708,79.802-176.792,103.917 c-19.208,11-43.646,10.99-62.813,0.01C160.792,372.584,83.667,326.98,26.459,293.011c-3.375-2.031-7.646-1.979-11.021,0.073 C5.771,299.011,0,309.073,0,320c0,11.115,5.917,21.281,15.833,27.208C58.104,372.344,162,434.021,213.875,463.761 c6.354,3.646,13.563,5.573,20.792,5.573s14.438-1.927,20.813-5.583c51.854-29.729,155.75-91.406,198.021-116.552 c9.917-5.917,15.833-16.083,15.833-27.198C469.334,309.073,463.563,299.011,453.875,293.084z"/> </svg>
+							<p>Качественные материалы</p>
+						</div>
+						<div class="d-edge__text">Текст про качественные материалы. Текст про качественные материалы. Текст про качественные материалы. Текст про качественные материалы.</div>
+					</div>
+
+					<div class="d-edge__inner">
+						<div class="edge__item"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36.447px" height="36.447px" viewBox="0 0 36.447 36.447" style="enable-background:new 0 0 36.447 36.447;" xml:space="preserve"> <path d="M30.224,3.948h-1.098V2.75c0-1.517-1.197-2.75-2.67-2.75c-1.474,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75 c0-1.517-1.197-2.75-2.67-2.75c-1.473,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75c0-1.517-1.197-2.75-2.67-2.75 c-1.473,0-2.67,1.233-2.67,2.75v1.197H6.224c-2.343,0-4.25,1.907-4.25,4.25v24c0,2.343,1.907,4.25,4.25,4.25h24 c2.344,0,4.25-1.907,4.25-4.25v-24C34.474,5.855,32.567,3.948,30.224,3.948z M25.286,2.75c0-0.689,0.525-1.25,1.17-1.25 c0.646,0,1.17,0.561,1.17,1.25v4.896c0,0.689-0.524,1.25-1.17,1.25c-0.645,0-1.17-0.561-1.17-1.25V2.75z M17.206,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M9.125,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M31.974,32.198c0,0.965-0.785,1.75-1.75,1.75h-24c-0.965,0-1.75-0.785-1.75-1.75v-22h27.5V32.198z"></path> <rect x="6.724" y="14.626" width="4.595" height="4.089"></rect> <rect x="12.857" y="14.626" width="4.596" height="4.089"></rect> <rect x="18.995" y="14.626" width="4.595" height="4.089"></rect> <rect x="25.128" y="14.626" width="4.596" height="4.089"></rect> <rect x="6.724" y="20.084" width="4.595" height="4.086"></rect> <rect x="12.857" y="20.084" width="4.596" height="4.086"></rect> <rect x="18.995" y="20.084" width="4.595" height="4.086"></rect> <rect x="25.128" y="20.084" width="4.596" height="4.086"></rect> <rect x="6.724" y="25.54" width="4.595" height="4.086"></rect> <rect x="12.857" y="25.54" width="4.596" height="4.086"></rect> <rect x="18.995" y="25.54" width="4.595" height="4.086"></rect> <rect x="25.128" y="25.54" width="4.596" height="4.086"></rect> </svg>
+							<p>Сроки<br/> изготовления</p>
+						</div>
+						<div class="d-edge__text">Текст про сроки изготовления. Текст про сроки изготовления. Текст про сроки изготовления. Текст про сроки изготовления.</div>
+					</div>
+
+					<div class="d-edge__inner">
+						<div class="edge__item">
+							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="612px" height="612px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve"> <path d="M21.474,377.522V117.138c0-14.469,11.729-26.199,26.199-26.199h260.25c14.469,0,26.198,11.73,26.198,26.199v260.385 c0,4.823-3.909,8.733-8.733,8.733H30.207C25.383,386.256,21.474,382.346,21.474,377.522z M231.634,466.724 c0,30.01-24.329,54.338-54.338,54.338c-30.009,0-54.338-24.328-54.338-54.338c0-30.011,24.329-54.338,54.338-54.338 C207.305,412.386,231.634,436.713,231.634,466.724z M204.464,466.724c0-15.005-12.164-27.169-27.169-27.169 s-27.17,12.164-27.17,27.169s12.165,27.17,27.17,27.17S204.464,481.729,204.464,466.724z M130.495,412.385H8.733 c-4.823,0-8.733,3.91-8.733,8.733v26.495c0,4.823,3.91,8.733,8.733,8.733h97.598C108.879,438.862,117.704,423.418,130.495,412.385z M515.938,466.724c0,30.01-24.329,54.338-54.338,54.338c-30.01,0-54.338-24.328-54.338-54.338 c0-30.011,24.328-54.338,54.338-54.338C491.609,412.385,515.938,436.713,515.938,466.724z M488.77,466.724 c0-15.005-12.165-27.169-27.17-27.169c-15.006,0-27.169,12.164-27.169,27.169s12.164,27.17,27.169,27.17 S488.77,481.729,488.77,466.724z M612,421.118v26.495c0,4.823-3.91,8.733-8.733,8.733h-70.704 c-5.057-34.683-34.906-61.427-70.961-61.427c-36.062,0-65.912,26.745-70.969,61.427H248.261 c-2.549-17.483-11.373-32.928-24.164-43.961h134.994V162.594c0-9.646,7.82-17.466,17.466-17.466h82.445 c23.214,0,44.911,11.531,57.9,30.77l53.15,78.721c7.796,11.547,11.962,25.161,11.962,39.094v118.672h21.253 C608.09,412.385,612,416.295,612,421.118z M523.408,256.635l-42.501-60.393c-1.636-2.324-4.3-3.707-7.142-3.707H407.47 c-4.822,0-8.733,3.91-8.733,8.733v60.393c0,4.824,3.91,8.733,8.733,8.733h108.798C523.342,270.394,527.48,262.421,523.408,256.635z "/> </svg>
+							<p>Доставка<br/> по СПб</p>
+						</div> 
+						<div class="d-edge__text">Текст про сроки изготовления. Текст про сроки изготовления. Текст про сроки изготовления. Текст про сроки изготовления.</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-cases">
+				<div class="container">
+					<h2 class="h2 h2--main case__h2">Примеры</h2>
+
+					<div class="d-cases-slider d-cases">
+
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_01.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_02.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_03.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_04.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_05.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_06.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_07.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_08.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_09.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_10.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_11.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_12.jpg" alt="">
+						</div>
+
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_01.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_02.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_03.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_04.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_05.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_06.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_07.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_08.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_09.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_10.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_11.jpg" alt="">
+						</div>
+						<div class="cases-slider__slide">
+							<img src="img/@2x/homepage/home-case_12.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="d-cases__btn">
+						<button href="" class="btn btn__green">Показать больше фотографий</button>
+					</div>
+
+					<div class="d-cases__btn2">
+						<button href="" class="btn btn__green">Скрыть фотографии</button>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="d-partners">
+				<div class="container">
+					<h2 class="h2 h2--main case__h2">Партнеры</h2>
+				</div>
+				<div class="d-partners__text">
+					<div class="container">
+						<p>Текст про крутые партнеров, крутых клиентов и крутых нас. Текст про крутые партнеров, крутых клиентов и крутых нас. Текст про крутые партнеров, крутых клиентов и крутых нас. Текст про крутые партнеров, крутых клиентов и крутых нас. Текст про крутые партнеров, крутых клиентов и крутых нас. Текст про крутые партнеров, крутых клиентов и крутых нас.</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="clients-slider">
+
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_01.png" alt="">
+						</div>
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_02.png" alt="">
+						</div>
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_04.png" alt="">
+						</div>
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_03.png" alt="">
+						</div>					
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_01.png" alt="">
+						</div>
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_02.png" alt="">
+						</div>
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_04.png" alt="">
+						</div>
+						<div class="clients-slider__slide">
+							<img src="img/@2x/homepage/clients_03.png" alt="">
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="sect-form juridical__sect-form">
+
+				<div class="sect-form__title">
+					<h2 class="h2">Оставьте ваши контакты</h2>
+				</div>
+
+				<p class="sect-form__aftertitle">и мы вам перезвоним</p>
+
+				<div class="container">
+
+					<form class="form">
+
+						<div class="form__left">
+
+							<div class="form__left-item">
+								<p>15 минут</p>
+								<span>Максимальное время ответа</span>
+							</div>
+							<div class="form__left-item">
+								<p>Система скидок</p>
+								<span>Скидки до 20% в зависимости от размеров заказа</span>
+							</div>
+							<div class="form__left-item">
+								<p>Срочные заказы</p>
+								<span>В срок от 3 часов</span>
+							</div>
+							<div class="form__left-item">
+								<p>Или по телефону:</p>
+								<p class="form__phone">8 812 983-11-19</p>
+								<span>Наши менеджеры проконсультируют по всем необходимым вопросам</span>
+							</div>
+							
+						</div>
+
+						<div class="form__right">
+							<div class="wrap-inpute">
+								<div class="wrap-inpute__item">
+									<input type="text" name="Имя" placeholder="Как вас зовут?">
+									<input type="emain" name="Почта" placeholder="Ваша эл.почта">
+									<input class="input-phone" type="text" name="Телефон" placeholder="Ваш номер телефон">
+								</div>
+							</div>
+							<div class="text-center">
+								<div class="input-cheked">
+									<input id="check2" type="checkbox" name="check" value="check2">
+									<label class="input-cheked__label" for="check2"><span class="input-cheked__text">Я согласен на обработку персональных данных</span></label>
+								</div>
+								<button class="btn form__btn">Отправить заявку</button>
+								<div class="form__hidden-phone">
+									<p>Или по телефону:</p>
+									<p>8 812 983-11-19</p>
+									<span>Наши менеджеры проконсультируют по всем необходимым вопросам</span>
+								</div>
+							</div>
+
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+
+
+			<div class="f-mayby">
+				<div class="container">
+					<h2 class="h2 h2--main">Вас также может заинтересовать</h2>
+
+					<div class="f-mayby__inner">
+
+						<div class="s-wrap__item">
+							<a href="">
+								<img src="img/@2x/services/services_01.jpg" alt="">
+								<div class="s-wrap__text">Закалка</div>
+							</a>
+						</div>
+						<div class="s-wrap__item">
+							<a href="">
+								<img src="img/@2x/services/services_14.jpg" alt="">
+								<div class="s-wrap__text">Покраска</div>
+							</a>
+						</div>
+						<div class="s-wrap__item">
+							<a href="">
+								<img src="img/@2x/services/services_09.jpg" alt="">
+								<div class="s-wrap__text">Сверление</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- END MAIN TAG -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+
+					<div class="footer__copy">
+						<p><span>©2019.</span> Стекольная компания № 1</p>                  
+					</div>
+					<div class="footer__logo">
+						<a href="/"><img src="img/@2x/homepage/logo-footer.png" alt=""></a>
+
+					</div>
+					<div class="footer__social">
+						<a href=""><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="500px" height="500px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 500 500" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs> <style type="text/css"> <![CDATA[.fil0 {fill:#fff} ]]> </style> </defs> <metadata /> <path class="fil0" d="M500 333l0 32 0 135 -500 0 0 -135 0 0 0 -230 0 0 0 -135 500 0 0 135 0 32 0 166zm-155 -61c9,8 19,17 27,26 3,4 7,9 9,14 4,7 1,15 -6,15l-39 0c-10,1 -18,-3 -25,-10 -5,-6 -10,-12 -16,-17 -2,-3 -4,-5 -7,-7 -5,-3 -10,-2 -13,4 -3,5 -4,12 -4,18 0,9 -3,12 -12,12 -20,1 -39,-2 -57,-12 -15,-9 -27,-21 -37,-35 -21,-28 -36,-58 -50,-89 -3,-7 -1,-11 7,-11 13,0 25,0 38,0 5,0 9,3 11,8 7,17 15,33 26,48 3,4 6,8 10,11 4,3 8,2 10,-3 1,-3 2,-7 2,-10 1,-12 1,-24 -1,-36 -1,-7 -5,-12 -12,-13 -4,-1 -3,-2 -1,-4 3,-4 6,-6 12,-6l44 0c7,1 8,4 9,11l0 50c0,2 2,10 7,12 4,1 6,-2 9,-4 10,-12 18,-25 25,-39 3,-6 5,-12 8,-18 1,-5 4,-7 10,-7l42 0c2,0 3,0 4,0 7,1 9,4 7,11 -3,11 -10,21 -17,30 -7,10 -15,19 -22,29 -6,9 -6,14 2,22l0 0z"/> <metadata /> </svg></a>
+						<a href=""><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="500px" height="500px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 500 500" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs> <style type="text/css"> <![CDATA[.fil0 {fill:#fff} ]]> </style> </defs> <metadata /> <path class="fil0" d="M500 350l0 0 0 150 -153 0 0 0 -194 0 0 0 -153 0 0 -150 0 0 0 -200 0 0 0 -150 153 0 0 0 194 0 0 0 153 0 0 150 0 0 0 200zm-110 -284c11,0 20,4 28,11 7,7 11,17 11,28 0,11 -4,21 -11,28 -8,7 -17,11 -28,11 -11,0 -21,-4 -28,-11 -7,-7 -12,-17 -12,-28 0,-11 5,-21 12,-28 7,-7 17,-11 28,-11zm11 28c-3,-3 -7,-4 -11,-4 -5,0 -8,1 -11,4 -3,3 -5,7 -5,11 0,4 2,8 5,11 3,3 6,5 11,5 4,0 8,-2 11,-5 3,-3 4,-7 4,-11 0,-4 -1,-8 -4,-11zm-151 23c37,0 70,15 94,39 24,24 39,57 39,94 0,37 -15,70 -39,94 -24,24 -57,39 -94,39 -37,0 -70,-15 -94,-39 -24,-24 -39,-57 -39,-94 0,-37 15,-70 39,-94 24,-24 57,-39 94,-39zm78 55c-20,-20 -48,-32 -78,-32 -31,0 -58,12 -78,32 -20,20 -33,48 -33,78 0,31 13,58 33,78 20,20 47,33 78,33 30,0 58,-13 78,-33 20,-20 32,-47 32,-78 0,-30 -12,-58 -32,-78z"/> </svg></a>
+						<a href=""><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="500px" height="500px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 500 500" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs> <style type="text/css"> <![CDATA[.fil0 {fill:#fff} ]]> </style> </defs> <metadata /> <path class="fil0" d="M135 500l-135 0 0 -134 0 -1 0 -216 0 0 0 -149 500 0 0 149 0 0 0 216 0 0 0 135 -134 0c0,0 0,0 -1,0l-6 0c0,0 0,0 0,0l0 -148 54 0c4,0 7,-4 7,-8l1 -58c0,-2 -1,-4 -3,-5 -1,-2 -3,-3 -5,-3l-54 0 0 -34c0,-16 4,-25 25,-25l31 0c4,0 8,-3 8,-7l0 -54c0,-5 -4,-8 -8,-8l-46 0c-52,0 -85,35 -85,88l0 40 -47 0c-4,0 -7,4 -7,8l0 58c0,4 3,8 7,8l47 0 0 148c0,0 0,0 0,0l-149 0 0 0z"/>  <metadata /> </svg> </a>
+					</div>
+
+				</div>
+				<p class="footer__links"><a href="">Политика конфиденциальности</a> | <a href="">Карта сайта</a></p>
+			</div>
+		</footer>
+
+
+
+		<script src="js/scripts.min.js"></script>
+
+	</body>
+	</html>
