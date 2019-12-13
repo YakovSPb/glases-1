@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+
+
+
 // CLIENT SLIDER START
 $('.clients-slider').slick({
 	slidesToShow: 4,
@@ -258,6 +261,11 @@ $(".tabs__wrapper .tab").click(function() {
 		$('.tabs__close').css('display', 'none')
 		$('.tabs__gumburger').css('display', 'block')
 	}
+blockHeight2 = $('.c-cases-slider').eq($(this).index())
+.css('height', 'auto')
+.height();
+$('.c-cases-slider').eq($(this).index()).css('height', '1032')
+$('.c-cases__btn2').css('display','none')
 }).eq(0).addClass("active");
 
 
@@ -275,19 +283,116 @@ const linkTab = document.getElementsByClassName('tabs__gumburger')
 const closeTab = document.getElementsByClassName('tabs__close')
 const menuTab = document.getElementsByClassName('tabs')
 
+
+if(linkTab[0]){
 linkTab[0].addEventListener('click', event => {
 	event.preventDefault()
 	menuTab[0].classList.add('tabs--active')
 	linkTab[0].style.display = 'none'
 	closeTab[0].style.display = 'block'
 })
+}
+
+if(closeTab[0]){
 closeTab[0].addEventListener('click', event => {
 	event.preventDefault()
 	menuTab[0].classList.remove('tabs--active')
 	linkTab[0].style.display = 'block'
 	closeTab[0].style.display = 'none'
 })
+}
 // MOBILE TABS END
+
+
+
+// CONSTRACTOR SLIDER START
+
+const $contrSlick = $('.profit__wrap')
+
+if(width < 576){
+	$contrSlick.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		draggable: true,
+		speed: 900,
+		rows: 1,
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 9000,
+		centerMode: false,
+		centerPadding: '0',
+	});
+}
+// CONSTRACTOR SLIDER END
+
+
+//CASES SPOILER START
+let blockHeight2 = $('.c-cases-slider').height();
+
+function casesReinit(){
+$('.c-cases-slider').css('height','auto');
+$('.c-cases-slider').css('height','1032');
+$('.c-cases__btn2').css('display', 'none')
+
+}
+casesReinit()
+
+
+
+$('.c-cases__btn').click(function(){
+	$('.c-cases-slider').animate({height:blockHeight2}, blockSpeed);
+	$(this).css('display', 'none')
+	$('.c-cases__btn2').css('display', 'block')
+});
+
+$('.c-cases__btn2').click(function(){
+	$('.c-cases-slider').animate({height:1032}, blockSpeed);
+	$('.c-cases__btn').css('display', 'block')
+	$(this).css('display', 'none')
+});
+
+
+
+// CASES SPOILER END
+
+
+
+// PROJECT SLIDER START
+$('.project__slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	speed: 900,
+	arrows: false,
+	dots: true,
+	infinite: false,
+	appendDots: '.project__dots'
+});
+// PROJECT SLIDER END
+
+// APPEND IMG TO DOTS START
+const projectsImages = $('.project__wrap img')
+// const dostImages = $('.project__dots li')
+for(let i = 0; i < projectsImages.length; i++) {
+let attrImage = $('.project__wrap img').eq(i).attr('src')
+$('.project__dots li').eq(i).html(`<img src="${attrImage}">`)
+}
+// APPEND IMG TO DOTS END
+
+// DOTS SLIDER START
+$('.slick-dots').slick({
+	slidesToShow: 9,
+	slidesToScroll: 3,
+	speed: 900,
+	arrows: true,
+	infinite: false,
+	prevArrow: '<div class="y_prevArrow"><img src="img/@2x/project/left-arrow.png" alt="" /></div>',
+	nextArrow: '<div class="y_nextArrow"><img src="img/@2x/project/left-arrow.png" alt="" /></div>',
+});
+
+const widthImg = $('.project__slider').width()
+$('.project__dots').css('width', widthImg)
+// DOTS SLIDER END
 
 
 

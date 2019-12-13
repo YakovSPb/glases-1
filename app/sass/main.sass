@@ -2044,6 +2044,8 @@ h1, .h1
 				padding-left: 20px
 				padding-right: 20px
 .pice__juridical
+	+media-breakpoint-down(xs)
+		display: none
 	.juridical__inner
 		background: #000!important
 	.juridical__wrap
@@ -2174,7 +2176,7 @@ h1, .h1
 	text-transform: uppercase
 	padding: 0 13px
 	display: inline-block
-	margin-left: 20px
+	margin-left: 5px
 
 .tabs__close
 	display: none
@@ -2187,3 +2189,216 @@ h1, .h1
 		font-size: 30px
 .tabs.tabs--active
 	display: flex
+
+
+// CONTRACTORS PAGE
+.contr-promo
+	&__img-320
+		width: 100%
+		display: none
+		+media-breakpoint-down(xs)
+			display: block
+	&__img-1200
+		width: 100%
+		+media-breakpoint-down(xs)
+			display: none
+.contr-content
+	margin-top: 70px
+	+media-breakpoint-down(md)
+		margin-top: 10px
+	&__wrap
+		max-width: 700px
+	p
+		margin-bottom: 0
+
+.profit
+	&__title
+		font-size: 32px
+		color: #fff
+		font-weight: 700
+		line-height: 50px
+		background: #000
+		text-transform: uppercase
+		text-align: center
+		margin: 70px 0
+		+media-breakpoint-down(md)
+			margin: 30px 0
+	&__wrap
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+	&__item
+		margin-bottom: 70px
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+	&__img
+		border: 10px solid $accent
+		width: 200px
+		height: 200px
+		margin-left: auto
+		margin-right: auto
+		display: flex
+		justify-content: center
+		align-items: center
+		svg
+			width: 100px
+			height: 100px
+	&__text
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 18px
+		text-align: center
+		margin-top: 25px
+		+media-breakpoint-down(md)
+			margin-top: 10px
+
+.cooperation
+	&__wrap
+		display: flex
+		+media-breakpoint-down(md)
+			flex-direction: column
+	&__info
+		background: $accent
+		width: 50%
+		padding: 70px 0 2px 100px
+		color: #fff
+		+media-breakpoint-down(md)
+			width: 100%
+			padding: 15px 10px
+	&__title
+		font-size: 32px
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 40px
+		max-width: 470px
+	&__img
+		width: 50%
+		+media-breakpoint-down(md)
+			width: 100%
+		img
+			width: 100%
+			height: 592px
+			object-fit: cover
+			+media-breakpoint-down(md)
+				height: auto
+	&__main-list
+		margin-left: 0
+		+media-breakpoint-down(md)
+			margin-left: 45px
+		li
+			&:before
+				border: 6px solid transparent
+				border-left: 12px solid #fff
+
+// CASES
+.cases__price
+	margin-top: 70px
+	+media-breakpoint-down(md)
+		margin-top: 20px
+	.tabs__wrapper .tabs .tab
+		margin-right: 10px
+	.container
+		padding: 0
+		.btn
+			width: 388px
+			display: block!important
+			+media-breakpoint-down(md)
+				margin: 20px auto
+			+media-breakpoint-down(sm)
+				width: 300px
+
+.c-cases-slider
+	display: flex
+	flex-wrap: wrap
+	overflow: hidden
+	justify-content: center
+
+.c-cases__btn2
+	display: none
+
+.cases__sect-form
+	+media-breakpoint-down(xs)
+		display: none
+
+// PROJECT
+.project
+	margin-top: 60px
+	+media-breakpoint-down(md)
+		margin-top: 20px	
+	&__slider
+		max-width: 930px
+		overflow: hidden
+		+media-breakpoint-down(lg)
+			margin: 0 auto
+			max-width: 100%
+	&__slide
+		img
+				margin: 0 auto
+				width: 100%
+				+media-breakpoint-down(xs)
+					height: 317px
+					object-fit: cover
+	&__wrap
+		display: flex
+		+media-breakpoint-down(lg)
+			flex-direction: column
+	&__info
+		padding-left: 20px
+		+media-breakpoint-down(lg)
+				margin-top: 20px
+				padding-left: 0
+	&__title
+		font-size: 18px
+		margin-bottom: 30px
+		text-transform: uppercase
+		font-weight: 700
+	&__text
+		margin-bottom: 30px
+
+.project__dots
+	+media-breakpoint-down(lg)
+		display: none
+	.slick-dots
+		display: flex
+		padding-left: 0
+		li
+			list-style-type: none
+			position: relative
+			cursor: pointer
+			&:hover
+				&:after
+					opacity: 0
+			&:after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100px
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background: rgba(0, 0, 0, .3)
+				transition: opacity .3s ease
+		img
+			width: 112px
+			height: 100px
+			object-fit: cover
+		button
+			display: none
+		.y_prevArrow, .y_nextArrow
+			position: absolute
+			top: 10px
+			z-index: 1000
+			cursor: pointer
+			img
+				width: 50px
+				height: 80px
+				object-fit: contain
+				transition: all .3s ease
+				&:hover
+					opacity: .6
+		.y_prevArrow
+			left: 17px
+		.y_nextArrow
+			right: 17px
+			transform: scale(-1, -1)
