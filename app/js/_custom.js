@@ -96,13 +96,13 @@ const link = document.getElementsByClassName('gumburger')
 const close = document.getElementsByClassName('menu__item--close')
 const menu = document.getElementsByClassName('menu')
 
-link[0].addEventListener('click', event => {
+link[0].addEventListener('click', function(event) {
 	event.preventDefault()
 	menu[0].classList.add('menu--active')
 	link[0].style.visibility = 'hidden'
 
 })
-close[0].addEventListener('click', event => {
+close[0].addEventListener('click', function(event) {
 	event.preventDefault()
 	menu[0].classList.remove('menu--active')
 	link[0].style.visibility = 'visible'
@@ -261,19 +261,19 @@ $(".tabs__wrapper .tab").click(function() {
 		$('.tabs__close').css('display', 'none')
 		$('.tabs__gumburger').css('display', 'block')
 	}
-blockHeight2 = $('.c-cases-slider').eq($(this).index())
-.css('height', 'auto')
-.height();
-$('.c-cases-slider').eq($(this).index()).css('height', '1032')
-$('.c-cases__btn2').css('display','none')
+	blockHeight2 = $('.c-cases-slider').eq($(this).index())
+	.css('height', 'auto')
+	.height();
+	$('.c-cases-slider').eq($(this).index()).css('height', '1032')
+	$('.c-cases__btn2').css('display','none')
 }).eq(0).addClass("active");
 
 
 
 // mobile
 function tabListener(){
-let activeTab = $('.tabs .active').text()
-$('.tabs__dublicate').text(activeTab)
+	let activeTab = $('.tabs .active').text()
+	$('.tabs__dublicate').text(activeTab)
 }
 tabListener()
 // PRICE TABS END
@@ -285,21 +285,21 @@ const menuTab = document.getElementsByClassName('tabs')
 
 
 if(linkTab[0]){
-linkTab[0].addEventListener('click', event => {
-	event.preventDefault()
-	menuTab[0].classList.add('tabs--active')
-	linkTab[0].style.display = 'none'
-	closeTab[0].style.display = 'block'
-})
+	linkTab[0].addEventListener('click', function(event) {
+		event.preventDefault()
+		menuTab[0].classList.add('tabs--active')
+		linkTab[0].style.display = 'none'
+		closeTab[0].style.display = 'block'
+	})
 }
 
 if(closeTab[0]){
-closeTab[0].addEventListener('click', event => {
-	event.preventDefault()
-	menuTab[0].classList.remove('tabs--active')
-	linkTab[0].style.display = 'block'
-	closeTab[0].style.display = 'none'
-})
+	closeTab[0].addEventListener('click', function(event) {
+		event.preventDefault()
+		menuTab[0].classList.remove('tabs--active')
+		linkTab[0].style.display = 'block'
+		closeTab[0].style.display = 'none'
+	})
 }
 // MOBILE TABS END
 
@@ -331,9 +331,9 @@ if(width < 576){
 let blockHeight2 = $('.c-cases-slider').height();
 
 function casesReinit(){
-$('.c-cases-slider').css('height','auto');
-$('.c-cases-slider').css('height','1032');
-$('.c-cases__btn2').css('display', 'none')
+	$('.c-cases-slider').css('height','auto');
+	$('.c-cases-slider').css('height','1032');
+	$('.c-cases__btn2').css('display', 'none')
 
 }
 casesReinit()
@@ -351,9 +351,6 @@ $('.c-cases__btn2').click(function(){
 	$('.c-cases__btn').css('display', 'block')
 	$(this).css('display', 'none')
 });
-
-
-
 // CASES SPOILER END
 
 
@@ -372,10 +369,9 @@ $('.project__slider').slick({
 
 // APPEND IMG TO DOTS START
 const projectsImages = $('.project__wrap img')
-// const dostImages = $('.project__dots li')
 for(let i = 0; i < projectsImages.length; i++) {
-let attrImage = $('.project__wrap img').eq(i).attr('src')
-$('.project__dots li').eq(i).html(`<img src="${attrImage}">`)
+	let attrImage = $('.project__wrap img').eq(i).attr('src')
+	$('.project__dots li').eq(i).html('<img src="' + attrImage + '">')
 }
 // APPEND IMG TO DOTS END
 
@@ -393,6 +389,67 @@ $('.slick-dots').slick({
 const widthImg = $('.project__slider').width()
 $('.project__dots').css('width', widthImg)
 // DOTS SLIDER END
+
+
+// THANS SLIDER START
+$('.thanks__slider').slick({
+	prevArrow: '<div class="y_prevArrow"><img src="img/@2x/project/left-arrow.png" alt="" /></div>',
+	nextArrow: '<div class="y_nextArrow"><img src="img/@2x/project/left-arrow.png" alt="" /></div>',
+	slidesToShow: 1,
+	infinite: true,
+	arrows: true,
+	dots: true
+});
+// THANS SLIDER START
+
+// DOTS MARGINE START
+if(width > 1200){
+	const widthDots = $('.thanks__promo .slick-dots').width()/2
+	$('.thanks__promo .slick-dots').css('margin-left', widthDots)
+// DOTS MARGINE END
+
+// .CERTIFICATE SPOILER START
+let certificateHeight2 = $('.certificate__inner').height();
+
+$('.certificate__inner').css('height','1200');
+
+
+$('.certificate__btn-more').click(function(){
+	$('.certificate__inner').animate({height:certificateHeight2}, blockSpeed);
+	$('.certificate__item-but').css('display', 'none')
+});
+
+$('.certificate__btn-close').click(function(){
+	$('.certificate__inner').animate({height:1200}, blockSpeed);
+	$('.certificate__item-but').css('display', 'block')
+});
+} else {
+	$('.certificate__inner').slick({
+		slidesToShow: 1,
+		infinite: true,
+		arrows: false,
+		dots: false
+	});
+
+}
+
+// .CERTIFICATE SPOILER END
+
+// CONTACTS FLOAR START
+const containerWidth = $('.container').width()
+const contactFloat = (width - 1396) / 2
+$('.contacts__left').css('left', contactFloat)
+
+// CONTACTS FLOAR END
+
+// FORM POPUP START
+$('.popup-with-zoom-anim').magnificPopup({
+	type: 'inline',
+	closeBtnInside: true,
+	closeMarkup:'<button title="%title%" class="mfp-close">&#10006;</button>',
+});
+
+// FORM POPUP END
 
 
 
